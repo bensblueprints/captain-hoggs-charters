@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chesapeake Bay Charter Fishing | Captain Hogg's Charter Service - Hampton, VA</title>
   <meta name="description" content="Book a charter fishing trip on the Chesapeake Bay with Captain Hogg. 30+ years experience, Coast Guard certified. Target cobia, red drum, stripers & more from Hampton, VA.">
-  <meta name="keywords" content="Chesapeake Bay charter fishing, Hampton VA fishing charter, Captain Hogg, fishing guide Hampton Roads, cobia fishing Virginia, charter boat Hampton VA">
+  <meta name="keywords" content="Chesapeake Bay charter fishing, Hampton VA fishing charter, Captain Hogg, fishing guide Hampton Roads, cobia fishing Virginia, charter boat Hampton VA, Virginia Beach charter fishing, deep sea fishing Hampton Roads, striped bass Chesapeake Bay, red drum fishing Virginia, spadefish charter, black drum fishing, bluefish charter Virginia, Spanish mackerel Chesapeake, flounder fishing Hampton, fishing trips near Williamsburg VA, fishing charters near Virginia Beach, Newport News fishing charter, Yorktown fishing trips, family fishing charter Virginia, kids fishing Chesapeake Bay, corporate fishing trips Hampton Roads, bachelor party fishing Virginia, birthday fishing charter, best fishing charter Hampton VA, charter fishing near me Virginia, inshore fishing Chesapeake Bay, bottom fishing Virginia, light tackle fishing Chesapeake, trophy fishing Virginia, guided fishing trips Hampton Roads">
   <link rel="canonical" href="https://captain-hoggs-charters.netlify.app/">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Captain Hogg - Captain Hogg's Charter Service">
@@ -122,6 +122,51 @@
         "@type": "Question",
         "name": "Where does Captain Hogg's charter depart from?",
         "acceptedAnswer": { "@type": "Answer", "text": "Captain Hogg's Charter Service departs from 101 South King Street in Downtown Hampton, Virginia. The dock is conveniently located for visitors from Williamsburg (45 min), Virginia Beach (1 hour), Yorktown (30 min), and Newport News (20 min)." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best time of year to fish the Chesapeake Bay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The Chesapeake Bay offers year-round fishing, but peak season runs from April through November. Spring (April-June) brings cobia, red drum, and striped bass. Summer (June-September) is prime for cobia, spadefish, Spanish mackerel, and bluefish. Fall (September-November) offers excellent striped bass, red drum, and flounder fishing. Winter provides trophy striped bass opportunities." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Captain Hogg's charter family friendly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Absolutely! Captain Hogg's Charter Service is one of the most family-friendly fishing charters in Hampton Roads. Kids of all ages are welcome, and Captain Hogg has 40+ years of experience teaching beginners of all ages. The 40-foot Smokin' Gun II has comfortable indoor seating, shaded areas, and a restroom — perfect for families with children." }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book a charter fishing trip?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We recommend booking at least 2-4 weeks in advance, especially during peak season (May through October). Weekends and holidays fill up fast. A non-refundable deposit secures your date. Call (757) 876-1590 to check availability." }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I bring on a Chesapeake Bay fishing charter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Captain Hogg provides all fishing equipment, bait, tackle, and fish filleting service. You should bring: a valid Virginia saltwater fishing license, sunscreen, sunglasses, hat, weather-appropriate clothing, non-marking shoes, food and drinks (no glass bottles), cooler for your catch, and a camera. Motion sickness medication is recommended if you're prone to seasickness." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I keep the fish I catch on the Chesapeake Bay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes! You can keep any legal-sized fish caught within Virginia Marine Resources Commission regulations. Captain Hogg stays current on all size and bag limits. Fish filleting service is included with every charter — your catch will be cleaned, filleted, and bagged for you to take home." }
+      },
+      {
+        "@type": "Question",
+        "name": "What size is Captain Hogg's charter boat?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The Smokin' Gun II is a 40-foot Coast Guard-certified charter vessel equipped with the latest electronics, safety gear, comfortable indoor seating, shaded fishing areas, and a restroom. The boat comfortably accommodates up to 6 passengers and is one of the best-equipped charter boats in the Hampton Roads fleet." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a charter fishing trip near Virginia Beach?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes! Captain Hogg's Charter Service departs from Hampton, Virginia — just one hour from Virginia Beach. Many Virginia Beach visitors choose Captain Hogg for Chesapeake Bay charter fishing because of the experienced captain, well-equipped boat, and excellent fishing grounds. The drive from Virginia Beach is an easy trip via I-64." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if the weather is bad on my charter fishing day?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Safety is the top priority. If weather conditions are unsafe for fishing, Captain Hogg will contact you to reschedule your trip at no additional cost. Light rain usually does not cancel a trip — fish often bite better in overcast conditions. Captain Hogg monitors marine forecasts closely and will communicate any concerns before your scheduled trip." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I book a private charter for a corporate event or special occasion?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes! Captain Hogg's Charter Service is perfect for corporate outings, team building events, bachelor parties, birthday celebrations, and other special occasions. The 40-foot Smokin' Gun II comfortably handles groups up to 6 people. Call (757) 876-1590 to discuss group packages and custom trip options." }
       }
     ]
   }
@@ -1084,6 +1129,375 @@
       .footer-bottom { flex-direction: column; text-align: center; gap: 0.5rem; }
     }
 
+    /* ========== SPECIES GUIDE ========== */
+    .species { background: var(--white); }
+    .species-intro { color: var(--gray-600); font-size: 1.05rem; max-width: 800px; line-height: 1.8; margin-top: 1.5rem; }
+    .species-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+    .species-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .species-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      border-color: var(--teal);
+    }
+    .species-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .species-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .species-card .species-season {
+      display: inline-block;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--teal);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.75rem;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .species-card p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+    .species-text-block {
+      margin-top: 3rem;
+      columns: 2;
+      column-gap: 3rem;
+    }
+    .species-text-block h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      break-after: avoid;
+    }
+    .species-text-block p {
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      break-inside: avoid;
+    }
+
+    /* ========== SEASONAL CALENDAR ========== */
+    .seasons { background: var(--navy); color: var(--white); }
+    .seasons .section-title { color: var(--white); }
+    .seasons .section-desc { color: var(--gray-400); }
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+    .season-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      transition: all 0.3s;
+    }
+    .season-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .season-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .season-card .season-months {
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .season-card p { color: var(--gray-400); font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+    .season-species {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .season-species span {
+      background: rgba(14, 165, 233, 0.15);
+      color: var(--teal);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+    }
+    .seasons-text {
+      margin-top: 3rem;
+      max-width: 900px;
+    }
+    .seasons-text p { color: var(--gray-400); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+    .seasons-text strong { color: var(--gray-200); }
+
+    /* ========== THE BOAT ========== */
+    .boat { background: var(--gray-50); }
+    .boat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    .boat-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .boat-spec {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid var(--gray-200);
+    }
+    .boat-spec-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .boat-spec-value {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--navy);
+      letter-spacing: 0.5px;
+    }
+    .boat-text h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .boat-text p {
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .boat-features-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    .boat-features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .boat-features-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2.5;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ========== AREA GUIDE ========== */
+    .area-guide { background: var(--white); }
+    .area-cities {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+    .area-city {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      transition: all 0.3s;
+    }
+    .area-city:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+    .area-city h4 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .area-city .area-drive {
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .area-city p {
+      color: var(--gray-600);
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+    .area-text {
+      margin-top: 3rem;
+      columns: 2;
+      column-gap: 3rem;
+    }
+    .area-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      break-after: avoid;
+    }
+    .area-text p {
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      break-inside: avoid;
+    }
+
+    /* ========== FAQ ========== */
+    .faq { background: var(--gray-50); }
+    .faq-list {
+      max-width: 800px;
+      margin: 3rem auto 0;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .faq-item:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: left;
+      gap: 1rem;
+    }
+    .faq-q svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--gray-400);
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 500px; }
+    .faq-a-inner {
+      padding: 0 1.5rem 1.25rem;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* ========== WHAT TO BRING ========== */
+    .bring { background: var(--navy); color: var(--white); }
+    .bring .section-title { color: var(--white); }
+    .bring .section-desc { color: var(--gray-400); }
+    .bring-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .bring-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .bring-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--white);
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .bring-card ul {
+      list-style: none;
+    }
+    .bring-card ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      color: var(--gray-300);
+      font-size: 0.85rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+    .bring-card ul li svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2.5;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ========== RESPONSIVE - new sections ========== */
+    @media (max-width: 1024px) {
+      .species-grid { grid-template-columns: repeat(2, 1fr); }
+      .season-grid { grid-template-columns: repeat(2, 1fr); }
+      .area-cities { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .species-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      .season-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      .boat-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .area-cities { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      .bring-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      .species-text-block { columns: 1; }
+      .area-text { columns: 1; }
+    }
+
     /* ========== ANIMATIONS ========== */
     .fade-up {
       opacity: 0;
@@ -1103,9 +1517,10 @@
     <a href="#" class="nav-logo"><img src="images/logo.png" alt="Captain Hogg's Charter Service" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">CAPTAIN <em style="color:var(--gold)">HOGG'S</em></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
+      <li><a href="#species">Fish</a></li>
       <li><a href="#pricing">Rates</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#booking" class="nav-cta">Book Now</a></li>
     </ul>
@@ -1160,9 +1575,10 @@
           </div>
         </div>
         <div class="about-text fade-up">
-          <h3>EXPERIENCE THE BEST FISHING ON THE CHESAPEAKE BAY</h3>
-          <p>With over 30 years as a licensed captain and 40+ years fishing the Chesapeake Bay, Captain Hogg knows these waters like no one else. His passion for fishing and dedication to his clients means every trip is tailored for an incredible experience &mdash; whether you're a seasoned angler or heading out for the very first time.</p>
-          <p>Aboard the Smokin' Gun II, a 40-foot Coast Guard-certified vessel, you'll fish in comfort with indoor seating and shaded areas. Everything is provided &mdash; equipment, bait, and even fish filleting service. All you need to bring is yourself and a Virginia saltwater fishing license.</p>
+          <h3>EXPERIENCE THE BEST CHARTER FISHING ON THE CHESAPEAKE BAY</h3>
+          <p>With over 30 years as a licensed captain and more than four decades fishing the Chesapeake Bay, Captain Hogg is one of the most experienced charter fishing captains in the entire Hampton Roads region. His intimate knowledge of the Bay's channels, structure, currents, and seasonal fish migration patterns means he consistently puts clients on fish &mdash; whether you're a seasoned angler chasing trophy cobia or a family heading out on the water for the very first time.</p>
+          <p>Aboard the Smokin' Gun II, a 40-foot Coast Guard-certified charter vessel, you'll fish in comfort with climate-controlled indoor seating, shaded fishing areas, a private restroom, and the latest marine electronics. All fishing equipment, bait, tackle, and fish filleting service are included with every trip &mdash; Captain Hogg provides everything you need for a world-class Chesapeake Bay fishing experience. Just bring yourself and a Virginia saltwater fishing license.</p>
+          <p>Captain Hogg's Charter Service operates out of Downtown Hampton, Virginia, providing easy access to the lower Chesapeake Bay, the Hampton Roads Bridge-Tunnel fishing grounds, and the rich inshore waters that make this region one of the East Coast's premier saltwater fishing destinations. Whether you're visiting from Virginia Beach, Williamsburg, Newport News, Yorktown, or anywhere in the Hampton Roads metro area, you're just minutes from an unforgettable day on the water.</p>
           <div class="about-features">
             <div class="about-feature">
               <div class="about-feature-icon">
@@ -1189,6 +1605,177 @@
               <span>Up to 6 Guests</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIES GUIDE -->
+  <section class="species" id="species">
+    <div class="container">
+      <div class="section-label fade-up">Target Species</div>
+      <div class="section-title fade-up">WHAT YOU CAN CATCH ON THE CHESAPEAKE BAY</div>
+      <p class="species-intro fade-up">The Chesapeake Bay is the largest estuary in the United States and one of the most productive fisheries on the East Coast. Captain Hogg targets a wide variety of inshore saltwater species throughout the year, giving anglers the chance to battle everything from hard-fighting cobia and red drum to acrobatic Spanish mackerel and delicious flounder.</p>
+
+      <div class="species-grid">
+        <div class="species-card fade-up">
+          <div class="species-icon">&#128031;</div>
+          <h4>COBIA</h4>
+          <div class="species-season">May &ndash; September</div>
+          <p>Cobia are the crown jewel of Chesapeake Bay fishing. These powerful fish average 30-60 lbs and are known for explosive strikes and brutal fights. Captain Hogg sight-casts to cruising cobia around the Bay Bridge-Tunnel, channel edges, and buoy lines. The Chesapeake Bay is one of the top cobia destinations on the entire East Coast, and Captain Hogg's 40+ years of experience means he knows exactly where to find them.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#127843;</div>
+          <h4>RED DRUM</h4>
+          <div class="species-season">April &ndash; November</div>
+          <p>Red drum (redfish) are one of the most sought-after gamefish in the Chesapeake Bay. Juvenile "puppy drum" in the 18-27 inch slot range are excellent table fare, while oversized bull reds pushing 40+ inches put up an incredible fight. Captain Hogg targets red drum around grass flats, oyster bars, and channel edges throughout the Hampton Roads area.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#128032;</div>
+          <h4>STRIPED BASS</h4>
+          <div class="species-season">October &ndash; May</div>
+          <p>Striped bass (rockfish) are the iconic Chesapeake Bay gamefish. The Bay serves as the primary spawning ground for the entire Atlantic migratory stock, and fall through spring offers world-class striper fishing. Captain Hogg trolls, live-baits, and jiggs for stripers around the Bridge-Tunnel, channel edges, and structure throughout the lower Bay. Trophy fish exceeding 40 inches are caught regularly.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#127907;</div>
+          <h4>SPADEFISH</h4>
+          <div class="species-season">June &ndash; September</div>
+          <p>Spadefish are the "angelfish of the Atlantic" and a summer favorite on the Chesapeake Bay. These distinctive black-and-white striped fish school around the Bridge-Tunnel pilings, wrecks, and artificial reefs in massive numbers. They fight hard on light tackle and are excellent on the grill. Captain Hogg anchors over structure and uses clam baits to fill the cooler.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#129416;</div>
+          <h4>BLACK DRUM</h4>
+          <div class="species-season">April &ndash; June</div>
+          <p>Black drum are heavyweight bottom-feeders that migrate into the lower Chesapeake Bay each spring. These powerful fish can reach 80+ pounds and put up a grueling fight on heavy tackle. Captain Hogg targets big black drum around the Bridge-Tunnel and nearby shoals using fresh clam and crab baits. Spring is prime time for these Chesapeake Bay heavyweights.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#128030;</div>
+          <h4>SPANISH MACKEREL</h4>
+          <div class="species-season">June &ndash; October</div>
+          <p>Spanish mackerel are fast, acrobatic, and delicious &mdash; a triple threat that makes them one of the most popular Chesapeake Bay sportfish. These speedsters travel in large schools, slashing through baitfish near the surface. Captain Hogg trolls Clark spoons and Drone spoons to put anglers on fast-paced mackerel action throughout the summer months.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#128033;</div>
+          <h4>BLUEFISH</h4>
+          <div class="species-season">May &ndash; November</div>
+          <p>Bluefish are the most aggressive predators in the Chesapeake Bay. Known for their razor-sharp teeth and vicious strikes, blues provide non-stop action on light tackle. From small "snapper" blues to 10+ pound "gator" blues, these fish are a blast to catch and are found throughout the Bay from spring through fall. Great for beginners and kids.</p>
+        </div>
+        <div class="species-card fade-up">
+          <div class="species-icon">&#129421;</div>
+          <h4>FLOUNDER</h4>
+          <div class="species-season">April &ndash; November</div>
+          <p>Flounder (summer flounder/fluke) are prized for their mild, white, flaky meat &mdash; widely considered the best-eating fish in the Chesapeake Bay. Captain Hogg drifts or slow-trolls over sandy bottoms, channel edges, and structure where flounder lie in ambush. The Hampton Roads area is one of Virginia's top flounder fishing destinations, with the chance for "doormat" fish over 24 inches.</p>
+        </div>
+      </div>
+
+      <div class="species-text-block fade-up">
+        <h3>WHY THE CHESAPEAKE BAY IS A WORLD-CLASS FISHERY</h3>
+        <p>The Chesapeake Bay stretches over 200 miles from the Susquehanna River in Maryland to the Atlantic Ocean at Virginia Beach, making it the largest estuary in North America. This vast body of water serves as a critical nursery and feeding ground for hundreds of fish species, creating one of the most diverse and productive fisheries on the entire East Coast.</p>
+        <p>Hampton, Virginia sits at the mouth of the Chesapeake Bay where the James River, Hampton Roads harbor, and the open Bay converge. This confluence of habitats &mdash; from deep shipping channels and bridge pilings to shallow grass flats and oyster bars &mdash; creates an incredibly rich fishing environment that attracts both resident and migratory gamefish species year-round.</p>
+        <p>Captain Hogg's decades of experience fishing these waters means he understands the seasonal patterns, tidal movements, water temperature transitions, and baitfish migrations that determine where fish will be on any given day. Whether you're targeting trophy cobia in summer, bull red drum in fall, or monster striped bass in winter, Captain Hogg puts you in the right spot at the right time.</p>
+        <p>The lower Chesapeake Bay around Hampton is also home to the famous Chesapeake Bay Bridge-Tunnel, a 17.6-mile engineering marvel that serves as one of the premier fishing structures on the East Coast. The bridge pilings, artificial islands, and adjacent rock piles create habitat that attracts virtually every gamefish species in the Bay, and Captain Hogg fishes this legendary structure regularly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASONAL CALENDAR -->
+  <section class="seasons" id="seasons">
+    <div class="container">
+      <div class="section-label fade-up" style="color: var(--gold)">When to Fish</div>
+      <div class="section-title fade-up">CHESAPEAKE BAY FISHING CALENDAR</div>
+      <p class="section-desc fade-up">The Chesapeake Bay offers incredible fishing opportunities year-round. Here's what to expect each season.</p>
+
+      <div class="season-grid">
+        <div class="season-card fade-up">
+          <h4 style="color: #22c55e;">SPRING</h4>
+          <div class="season-months">March &ndash; May</div>
+          <p>Spring brings warmer water temperatures and the return of migratory species. Striped bass fishing remains strong through April. Large black drum arrive in April-May for some of the year's most exciting big-game fishing. Red drum, flounder, and bluefish begin showing up as water temps climb past 60&deg;F.</p>
+          <div class="season-species">
+            <span>Striped Bass</span><span>Black Drum</span><span>Red Drum</span><span>Flounder</span><span>Bluefish</span>
+          </div>
+        </div>
+        <div class="season-card fade-up">
+          <h4 style="color: var(--gold);">SUMMER</h4>
+          <div class="season-months">June &ndash; August</div>
+          <p>Summer is peak season on the Chesapeake Bay with the greatest variety of species available. Cobia fishing is at its best from June through August. Spadefish stack up around structure, Spanish mackerel run in schools, and red drum patrol the flats. This is the most popular time for family fishing charters.</p>
+          <div class="season-species">
+            <span>Cobia</span><span>Spadefish</span><span>Spanish Mackerel</span><span>Red Drum</span><span>Flounder</span><span>Bluefish</span>
+          </div>
+        </div>
+        <div class="season-card fade-up">
+          <h4 style="color: #f97316;">FALL</h4>
+          <div class="season-months">September &ndash; November</div>
+          <p>Fall fishing on the Chesapeake Bay is outstanding. Cooling water temperatures trigger massive baitfish migrations that attract red drum, striped bass, bluefish, and Spanish mackerel. Many experienced anglers consider fall the best overall season for Chesapeake Bay fishing due to the combination of species diversity and fish activity levels.</p>
+          <div class="season-species">
+            <span>Striped Bass</span><span>Red Drum</span><span>Spanish Mackerel</span><span>Bluefish</span><span>Flounder</span><span>Cobia</span>
+          </div>
+        </div>
+        <div class="season-card fade-up">
+          <h4 style="color: var(--teal);">WINTER</h4>
+          <div class="season-months">December &ndash; February</div>
+          <p>Winter on the Chesapeake Bay is trophy striped bass season. Large migratory rockfish move through the lower Bay following schools of menhaden, offering the chance at fish exceeding 40+ inches. While the weather is colder, dedicated anglers who brave the elements are often rewarded with the biggest catches of the year.</p>
+          <div class="season-species">
+            <span>Trophy Striped Bass</span><span>Large Bluefish</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="seasons-text fade-up">
+        <p><strong>Year-Round Fishing Opportunities:</strong> Unlike many coastal destinations that have a limited fishing season, the Chesapeake Bay offers productive fishing 12 months a year. Captain Hogg adjusts his techniques, locations, and target species based on water temperature, baitfish movements, and seasonal migrations to ensure every charter is a productive outing. Whether you're visiting Hampton in the heat of July or the chill of January, there are always fish to catch.</p>
+        <p><strong>Booking Tip:</strong> Peak season (May through October) books up fastest, especially weekends and holidays. If you're planning a summer cobia trip or fall striper run, we recommend booking 2-4 weeks in advance to secure your preferred date. Call <a href="tel:+17578761590" style="color:var(--gold);font-weight:600;">(757) 876-1590</a> to check availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BOAT -->
+  <section class="boat" id="boat">
+    <div class="container">
+      <div class="section-label fade-up">Our Vessel</div>
+      <div class="section-title fade-up">THE SMOKIN' GUN II</div>
+      <p class="section-desc fade-up">A 40-foot Coast Guard-certified charter fishing vessel built for comfort, safety, and serious fishing.</p>
+
+      <div class="boat-grid">
+        <div class="boat-image fade-up">
+          <div class="about-image">
+            <img src="images/photo_007.jpg" alt="Smokin' Gun II - 40-foot charter fishing boat in Hampton, VA" loading="lazy">
+            <div class="about-image-badge">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              USCG Certified
+            </div>
+          </div>
+        </div>
+        <div class="boat-text fade-up">
+          <h3>BUILT FOR CHESAPEAKE BAY FISHING</h3>
+          <p>The Smokin' Gun II isn't just any charter boat &mdash; it's a purpose-built 40-foot fishing machine designed specifically for the demands of Chesapeake Bay charter fishing. Coast Guard certified and fully insured, this vessel provides the perfect combination of fishing capability, passenger comfort, and safety equipment that serious anglers and families alike expect from a top-tier charter operation.</p>
+          <p>Captain Hogg has outfitted the Smokin' Gun II with the latest marine electronics including GPS, fish finder, radar, and VHF radio. The boat features both open-air and covered fishing areas, comfortable indoor cabin seating for when you need a break from the elements, and a private restroom &mdash; making it ideal for full-day and marathon fishing trips.</p>
+
+          <div class="boat-specs">
+            <div class="boat-spec">
+              <div class="boat-spec-label">Length</div>
+              <div class="boat-spec-value">40 FEET</div>
+            </div>
+            <div class="boat-spec">
+              <div class="boat-spec-label">Passengers</div>
+              <div class="boat-spec-value">UP TO 6</div>
+            </div>
+            <div class="boat-spec">
+              <div class="boat-spec-label">Certification</div>
+              <div class="boat-spec-value">USCG CERTIFIED</div>
+            </div>
+            <div class="boat-spec">
+              <div class="boat-spec-label">Home Port</div>
+              <div class="boat-spec-value">HAMPTON, VA</div>
+            </div>
+          </div>
+
+          <ul class="boat-features-list">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Latest marine electronics (GPS, fish finder, radar, VHF)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Climate-controlled indoor cabin with comfortable seating</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Shaded open-air fishing areas with rod holders</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Private restroom onboard</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Full safety equipment including PFDs &amp; first aid</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Professional-grade fishing equipment for all guests</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1461,6 +2048,208 @@
     </div>
   </section>
 
+  <!-- WHAT TO BRING -->
+  <section class="bring" id="prepare">
+    <div class="container">
+      <div class="section-label fade-up" style="color: var(--gold)">Be Prepared</div>
+      <div class="section-title fade-up">WHAT TO BRING ON YOUR CHARTER</div>
+      <p class="section-desc fade-up">Captain Hogg provides all fishing equipment, bait, tackle, and fish filleting service. Here's what you should bring for the best experience.</p>
+
+      <div class="bring-grid">
+        <div class="bring-card fade-up">
+          <h4>ESSENTIALS</h4>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Valid Virginia saltwater fishing license</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Photo ID (driver's license or passport)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sunscreen (SPF 50+ recommended)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Polarized sunglasses</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Hat or visor for sun protection</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Non-marking, non-slip shoes</li>
+          </ul>
+        </div>
+        <div class="bring-card fade-up">
+          <h4>FOOD &amp; COMFORT</h4>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Drinks and water (no glass bottles)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Packed lunch or snacks for longer trips</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Light jacket or rain gear (weather changes fast on the Bay)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Motion sickness medication if prone to seasickness</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Cooler with ice for your catch (Captain Hogg has bags)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Towel or bandana</li>
+          </ul>
+        </div>
+        <div class="bring-card fade-up">
+          <h4>NICE TO HAVE</h4>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Camera or GoPro for photos and video</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Lip balm with SPF</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Cash for gratuity (industry standard is 15-20%)</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Waterproof phone case</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Change of clothes for after the trip</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Positive attitude and sense of adventure!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREA GUIDE -->
+  <section class="area-guide" id="area">
+    <div class="container">
+      <div class="section-label fade-up">Service Area</div>
+      <div class="section-title fade-up">CHARTER FISHING NEAR YOU</div>
+      <p class="section-desc fade-up">Captain Hogg's Charter Service is conveniently located in Downtown Hampton, VA &mdash; easily accessible from across the Hampton Roads region.</p>
+
+      <div class="area-cities">
+        <div class="area-city fade-up">
+          <h4>HAMPTON</h4>
+          <div class="area-drive">Home Port &bull; 0 min</div>
+          <p>Captain Hogg's Charter Service departs from 101 South King Street in the heart of Downtown Hampton. Located on the waterfront, the dock is just steps from the Virginia Air &amp; Space Science Center, Fort Monroe, and Buckroe Beach. Hampton is a historic city with deep maritime roots and some of the best access to Chesapeake Bay fishing on the Virginia coast.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>NEWPORT NEWS</h4>
+          <div class="area-drive">20 minutes via I-64</div>
+          <p>Newport News residents enjoy the closest drive to Captain Hogg's dock. Just 20 minutes via I-64 or Mercury Boulevard, it's the perfect weekend morning trip. Newport News is home to the world's largest shipyard, and the adjacent waters of the James River and Hampton Roads create prime fishing habitat where bay species congregate.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>VIRGINIA BEACH</h4>
+          <div class="area-drive">1 hour via I-64 &amp; HRBT</div>
+          <p>Virginia Beach visitors and locals looking for Chesapeake Bay charter fishing choose Captain Hogg's for the experienced captain, spacious boat, and access to the Bay's best fishing grounds. The drive via I-64 and the Hampton Roads Bridge-Tunnel takes about an hour &mdash; well worth it for the quality of fishing Captain Hogg delivers on the Chesapeake Bay.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>WILLIAMSBURG</h4>
+          <div class="area-drive">45 minutes via I-64</div>
+          <p>Williamsburg visitors combining history with outdoor adventure find Captain Hogg's charter the perfect complement to their Colonial Williamsburg trip. Families visiting Busch Gardens, Water Country USA, or the historic district can add a half-day or full-day fishing charter to their vacation &mdash; it's one of the most popular activities for Williamsburg tourists.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>YORKTOWN</h4>
+          <div class="area-drive">30 minutes via I-64</div>
+          <p>Yorktown is just 30 minutes from Captain Hogg's dock, making it easy for Yorktown residents and tourists to enjoy a charter fishing trip on the Chesapeake Bay. The drive along the scenic Colonial Parkway or via I-64 is quick and convenient. Combine your battlefield tour with an unforgettable day on the water.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>NORFOLK</h4>
+          <div class="area-drive">30 minutes via I-64</div>
+          <p>Norfolk residents and Navy personnel stationed at Naval Station Norfolk are just 30 minutes from Captain Hogg's charter. Whether you're looking for a weekend fishing trip, a birthday outing, or team building on the water, Captain Hogg offers an accessible and affordable charter experience right across the Hampton Roads harbor.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>RICHMOND</h4>
+          <div class="area-drive">1.5 hours via I-64</div>
+          <p>Richmond anglers make the 90-minute drive to Hampton for some of the best saltwater fishing in Virginia. The Chesapeake Bay offers a completely different fishing experience from Central Virginia's freshwater rivers and lakes. Many Richmond residents book full-day or marathon charters to maximize their time on the water.</p>
+        </div>
+        <div class="area-city fade-up">
+          <h4>OUTER BANKS / NC</h4>
+          <div class="area-drive">2 hours via US-17</div>
+          <p>Anglers from the Northern Outer Banks and northeastern North Carolina travel to Hampton for Chesapeake Bay charter fishing that offers species diversity hard to find elsewhere. The Bay's unique ecosystem means you can target species like spadefish and cobia that aren't as accessible from the OBX surf and nearshore waters.</p>
+        </div>
+      </div>
+
+      <div class="area-text fade-up">
+        <h3>THE HAMPTON ROADS FISHING EXPERIENCE</h3>
+        <p>Hampton Roads is one of the largest metro areas in Virginia, encompassing the cities of Hampton, Newport News, Norfolk, Virginia Beach, Chesapeake, Suffolk, Portsmouth, Williamsburg, and surrounding communities. With a combined population of nearly 2 million people, the region sits at the confluence of the James River, Elizabeth River, and Chesapeake Bay &mdash; creating one of the richest marine environments on the Atlantic seaboard.</p>
+        <p>Captain Hogg's Charter Service is ideally positioned in Downtown Hampton to access the full range of Chesapeake Bay fishing opportunities. From the dock at 101 South King Street, it's a short run to the lower Bay's legendary fishing grounds including the Hampton Roads Bridge-Tunnel, the Monitor-Merrimac Bridge-Tunnel area, Thimble Shoal Channel, the Hampton Bar, and miles of productive shoreline structure.</p>
+        <h3>PERFECT FOR TOURISTS AND VISITORS</h3>
+        <p>Hampton Roads welcomes millions of visitors each year who come for the beaches, military bases, historic sites, and theme parks. A charter fishing trip with Captain Hogg is the perfect way to experience the Chesapeake Bay's natural beauty while creating memories that last a lifetime. Whether you're on a family vacation to Virginia Beach, a history trip to Colonial Williamsburg and Yorktown, or visiting loved ones stationed at one of the area's military installations, a day of fishing on the Bay should be on your itinerary.</p>
+        <p>Captain Hogg welcomes visitors from across the country and around the world. His patient teaching style and family-friendly approach make every charter accessible to anglers of all experience levels, from first-time fishermen to seasoned saltwater veterans.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-label fade-up">Common Questions</div>
+      <div class="section-title fade-up">FREQUENTLY ASKED QUESTIONS</div>
+      <p class="section-desc fade-up">Everything you need to know about fishing with Captain Hogg on the Chesapeake Bay.</p>
+
+      <div class="faq-list">
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            How much does a Chesapeake Bay charter fishing trip cost?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Captain Hogg's Charter Service offers three trip options: <strong>Half Day (4 hours) at $500</strong>, <strong>Full Day (8 hours) at $900</strong>, and <strong>Marathon (10 hours) at $1,100</strong>. Base pricing covers 1-4 guests, with additional guests at $75 per person (maximum 6 total). All trips include fishing equipment, bait, tackle, and fish filleting service. A non-refundable deposit is required to reserve your date.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Do I need a fishing license to fish on the Chesapeake Bay?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Yes, all anglers need a valid <strong>Virginia saltwater fishing license</strong> to fish on the Chesapeake Bay. You can purchase one online through the <a href="https://mrc.virginia.gov/Regulations/swfishinglicense.shtm" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Virginia Marine Resources Commission website</a> before your trip. It only takes a few minutes and can be done from your phone. Captain Hogg's charter does not provide fishing licenses.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            What fish can I catch on the Chesapeake Bay?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">The Chesapeake Bay offers incredible species diversity. Captain Hogg targets <strong>cobia, red drum, striped bass (rockfish), spadefish, black drum, Spanish mackerel, bluefish, and flounder</strong> depending on the season. The Bay's position as the largest estuary in North America means there is always something biting, from trophy gamefish to delicious table fare. Check our <a href="#seasons" style="color:var(--teal);font-weight:600;">seasonal calendar</a> for what's running during your visit.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            What is included on a charter with Captain Hogg?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Every charter aboard the Smokin' Gun II is fully equipped. Captain Hogg provides: <strong>all fishing rods, reels, and tackle; fresh bait; a 40-foot Coast Guard-certified vessel with indoor cabin, shaded areas, and restroom; the latest marine electronics; all safety equipment including PFDs and first aid; and complimentary fish filleting service</strong> so your catch is cleaned, filleted, and bagged for you to take home. All you need to bring is your fishing license, food/drinks, sun protection, and a great attitude.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Is the charter family friendly? Can I bring kids?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><strong>Absolutely!</strong> Captain Hogg's Charter Service is one of the most family-friendly fishing charters in Hampton Roads. Kids of all ages are welcome aboard the Smokin' Gun II. Captain Hogg has over 40 years of experience and is incredibly patient with young and first-time anglers. The boat has a comfortable indoor cabin with seating, shaded areas, and a private restroom &mdash; important amenities for families with children. Many of our most memorable trips are family outings and father-son/daughter fishing adventures.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            When is the best time to go fishing on the Chesapeake Bay?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">The Chesapeake Bay offers productive fishing <strong>year-round</strong>. Peak season runs from <strong>April through November</strong>, with the greatest species variety during summer months (June-August). Spring is excellent for striped bass, black drum, and early red drum. Summer brings cobia, spadefish, Spanish mackerel, and bluefish. Fall offers outstanding striper and red drum fishing. Winter is trophy striped bass season. The "best" time depends on your target species &mdash; check our <a href="#seasons" style="color:var(--teal);font-weight:600;">seasonal calendar</a> for details.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            How far in advance should I book?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">We recommend booking <strong>2-4 weeks in advance</strong>, especially during peak season (May through October). Weekends, holidays, and prime summer dates fill up fastest. A non-refundable deposit secures your reservation. Last-minute availability does occasionally open up &mdash; call <a href="tel:+17578761590" style="color:var(--teal);font-weight:600;">(757) 876-1590</a> to check current availability.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            What should I bring on the charter?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Captain Hogg provides all fishing equipment, bait, and tackle. You should bring: <strong>valid Virginia saltwater fishing license, sunscreen (SPF 50+), polarized sunglasses, hat, weather-appropriate clothing, non-marking shoes, food and drinks (no glass bottles), cooler with ice for your catch, and camera</strong>. Motion sickness medication is recommended if you're prone to seasickness. See our full <a href="#prepare" style="color:var(--teal);font-weight:600;">what to bring guide</a> for details.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Can I keep the fish I catch?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><strong>Yes!</strong> You can keep any legal-sized fish caught within Virginia Marine Resources Commission (VMRC) regulations. Captain Hogg stays current on all size limits, bag limits, and seasonal regulations. <strong>Fish filleting service is included</strong> with every charter &mdash; Captain Hogg will clean, fillet, and bag your catch for you to take home. Bring a cooler with ice to keep your fillets fresh.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            What happens if the weather is bad?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Safety is Captain Hogg's top priority. If weather conditions are unsafe for fishing, he will contact you to <strong>reschedule your trip at no additional cost</strong>. Light rain typically does not cancel a trip &mdash; fish often bite better in overcast conditions. Captain Hogg monitors marine weather forecasts closely and will communicate any weather concerns before your scheduled departure. The Smokin' Gun II's indoor cabin provides shelter if conditions change unexpectedly during your trip.</div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Where is the dock? How do I get there?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Captain Hogg's Charter Service departs from <strong>101 South King Street, Hampton, VA 23669</strong> in the Downtown Hampton waterfront area. The dock is easily accessible from I-64. From Virginia Beach, take I-64 West through the Hampton Roads Bridge-Tunnel. From Williamsburg or Richmond, take I-64 East. Parking is available near the dock. <a href="https://www.google.com/maps/dir/?api=1&destination=101+South+King+Street,+Hampton,+VA+23669" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Get Google Maps directions &rarr;</a></div></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Can I book a charter for a corporate event, bachelor party, or birthday?
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><strong>Absolutely!</strong> Captain Hogg's Charter Service is perfect for corporate team building, bachelor/bachelorette parties, birthday celebrations, anniversary outings, and other special occasions. The Smokin' Gun II comfortably accommodates up to 6 passengers. Captain Hogg has hosted countless corporate groups and special event charters and knows how to make every trip memorable. Call <a href="tel:+17578761590" style="color:var(--teal);font-weight:600;">(757) 876-1590</a> to discuss your event.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FISHING LICENSE BANNER -->
   <section style="background:linear-gradient(135deg,#065f46,#047857);padding:3rem 2rem;text-align:center;">
     <div class="container">
@@ -1525,8 +2314,13 @@
       <div class="footer-brand"><img src="images/logo.png" alt="Captain Hogg's Charter Service" style="height:50px;width:auto;" onerror="this.style.display='none';this.parentElement.innerHTML='CAPTAIN <span style=color:var(--gold)>HOGG\'S</span>'"></div>
       <ul class="footer-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#species">Fish Species</a></li>
+        <li><a href="#seasons">Seasonal Calendar</a></li>
+        <li><a href="#boat">The Boat</a></li>
         <li><a href="#pricing">Rates</a></li>
         <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#area">Service Area</a></li>
         <li><a href="#booking">Book Now</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="admin.html">Admin</a></li>
