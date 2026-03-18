@@ -1155,6 +1155,82 @@
       font-size: 2.5rem;
       margin-bottom: 0.75rem;
     }
+    .species-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    /* ========== SEASONAL CHART TABLE ========== */
+    .chart-wrapper {
+      margin-top: 3rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .fish-chart {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      min-width: 700px;
+    }
+    .fish-chart th, .fish-chart td {
+      padding: 0.5rem 0.35rem;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .fish-chart thead th {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      position: sticky;
+      top: 0;
+    }
+    .fish-chart tbody th {
+      text-align: left;
+      font-weight: 600;
+      color: var(--white);
+      white-space: nowrap;
+      padding-left: 0.75rem;
+      background: var(--navy-light);
+    }
+    .fish-chart .avail {
+      background: rgba(34, 197, 94, 0.15);
+      color: #22c55e;
+      font-weight: 700;
+    }
+    .fish-chart .peak {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .fish-chart .none {
+      color: var(--gray-700);
+    }
+    .chart-legend {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .chart-legend span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--gray-400);
+      font-size: 0.75rem;
+    }
+    .chart-legend .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      display: inline-block;
+    }
     .species-card h4 {
       font-family: var(--font-display);
       font-size: 1.3rem;
@@ -1619,49 +1695,49 @@
 
       <div class="species-grid">
         <div class="species-card fade-up">
-          <div class="species-icon">&#128031;</div>
+          <img src="images/fish_cobia-feat.png" alt="Cobia catch on Chesapeake Bay charter with Captain Hogg" class="species-card-img" loading="lazy">
           <h4>COBIA</h4>
           <div class="species-season">May &ndash; September</div>
           <p>Cobia are the crown jewel of Chesapeake Bay fishing. These powerful fish average 30-60 lbs and are known for explosive strikes and brutal fights. Captain Hogg sight-casts to cruising cobia around the Bay Bridge-Tunnel, channel edges, and buoy lines. The Chesapeake Bay is one of the top cobia destinations on the entire East Coast, and Captain Hogg's 40+ years of experience means he knows exactly where to find them.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#127843;</div>
+          <img src="images/fish_species-3.png" alt="Red drum catch on Chesapeake Bay fishing charter" class="species-card-img" loading="lazy">
           <h4>RED DRUM</h4>
           <div class="species-season">April &ndash; November</div>
           <p>Red drum (redfish) are one of the most sought-after gamefish in the Chesapeake Bay. Juvenile "puppy drum" in the 18-27 inch slot range are excellent table fare, while oversized bull reds pushing 40+ inches put up an incredible fight. Captain Hogg targets red drum around grass flats, oyster bars, and channel edges throughout the Hampton Roads area.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#128032;</div>
+          <img src="images/fish_striped-bass.png" alt="Striped bass rockfish catch from Chesapeake Bay" class="species-card-img" loading="lazy">
           <h4>STRIPED BASS</h4>
           <div class="species-season">October &ndash; May</div>
           <p>Striped bass (rockfish) are the iconic Chesapeake Bay gamefish. The Bay serves as the primary spawning ground for the entire Atlantic migratory stock, and fall through spring offers world-class striper fishing. Captain Hogg trolls, live-baits, and jiggs for stripers around the Bridge-Tunnel, channel edges, and structure throughout the lower Bay. Trophy fish exceeding 40 inches are caught regularly.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#127907;</div>
+          <img src="images/fish_species-7.png" alt="Spadefish catch on light tackle Chesapeake Bay" class="species-card-img" loading="lazy">
           <h4>SPADEFISH</h4>
           <div class="species-season">June &ndash; September</div>
           <p>Spadefish are the "angelfish of the Atlantic" and a summer favorite on the Chesapeake Bay. These distinctive black-and-white striped fish school around the Bridge-Tunnel pilings, wrecks, and artificial reefs in massive numbers. They fight hard on light tackle and are excellent on the grill. Captain Hogg anchors over structure and uses clam baits to fill the cooler.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#129416;</div>
+          <img src="images/fish_species-10.png" alt="Black drum catch on Chesapeake Bay charter fishing trip" class="species-card-img" loading="lazy">
           <h4>BLACK DRUM</h4>
           <div class="species-season">April &ndash; June</div>
           <p>Black drum are heavyweight bottom-feeders that migrate into the lower Chesapeake Bay each spring. These powerful fish can reach 80+ pounds and put up a grueling fight on heavy tackle. Captain Hogg targets big black drum around the Bridge-Tunnel and nearby shoals using fresh clam and crab baits. Spring is prime time for these Chesapeake Bay heavyweights.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#128030;</div>
+          <img src="images/fish_species-4.png" alt="Spanish mackerel catch on Chesapeake Bay fishing charter" class="species-card-img" loading="lazy">
           <h4>SPANISH MACKEREL</h4>
           <div class="species-season">June &ndash; October</div>
           <p>Spanish mackerel are fast, acrobatic, and delicious &mdash; a triple threat that makes them one of the most popular Chesapeake Bay sportfish. These speedsters travel in large schools, slashing through baitfish near the surface. Captain Hogg trolls Clark spoons and Drone spoons to put anglers on fast-paced mackerel action throughout the summer months.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#128033;</div>
+          <img src="images/fish_species-6.png" alt="Bluefish catch with kids on Chesapeake Bay charter" class="species-card-img" loading="lazy">
           <h4>BLUEFISH</h4>
           <div class="species-season">May &ndash; November</div>
           <p>Bluefish are the most aggressive predators in the Chesapeake Bay. Known for their razor-sharp teeth and vicious strikes, blues provide non-stop action on light tackle. From small "snapper" blues to 10+ pound "gator" blues, these fish are a blast to catch and are found throughout the Bay from spring through fall. Great for beginners and kids.</p>
         </div>
         <div class="species-card fade-up">
-          <div class="species-icon">&#129421;</div>
+          <img src="images/fish_species-5.png" alt="Flounder catch on Hampton VA fishing charter" class="species-card-img" loading="lazy">
           <h4>FLOUNDER</h4>
           <div class="species-season">April &ndash; November</div>
           <p>Flounder (summer flounder/fluke) are prized for their mild, white, flaky meat &mdash; widely considered the best-eating fish in the Chesapeake Bay. Captain Hogg drifts or slow-trolls over sandy bottoms, channel edges, and structure where flounder lie in ambush. The Hampton Roads area is one of Virginia's top flounder fishing destinations, with the chance for "doormat" fish over 24 inches.</p>
@@ -1723,6 +1799,92 @@
       <div class="seasons-text fade-up">
         <p><strong>Year-Round Fishing Opportunities:</strong> Unlike many coastal destinations that have a limited fishing season, the Chesapeake Bay offers productive fishing 12 months a year. Captain Hogg adjusts his techniques, locations, and target species based on water temperature, baitfish movements, and seasonal migrations to ensure every charter is a productive outing. Whether you're visiting Hampton in the heat of July or the chill of January, there are always fish to catch.</p>
         <p><strong>Booking Tip:</strong> Peak season (May through October) books up fastest, especially weekends and holidays. If you're planning a summer cobia trip or fall striper run, we recommend booking 2-4 weeks in advance to secure your preferred date. Call <a href="tel:+17578761590" style="color:var(--gold);font-weight:600;">(757) 876-1590</a> to check availability.</p>
+      </div>
+
+      <!-- MONTHLY SPECIES CHART -->
+      <div class="chart-wrapper fade-up" style="margin-top:3rem;">
+        <h3 style="font-family:var(--font-display);font-size:1.75rem;color:var(--white);letter-spacing:1px;margin-bottom:1rem;text-align:center;">MONTHLY SPECIES AVAILABILITY</h3>
+        <table class="fish-chart">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding-left:0.75rem;">Species</th>
+              <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
+              <th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Striped Bass</th>
+              <td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="none">&mdash;</td>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td>
+            </tr>
+            <tr>
+              <th>Cobia</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Red Drum</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td>
+              <td class="avail">&#10003;</td><td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Flounder</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Spanish Mackerel</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Bluefish</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Spadefish</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="peak">&#9733;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Black Drum</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Sheepshead</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Tautog</th>
+              <td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td>
+            </tr>
+            <tr>
+              <th>Croaker</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Speckled Trout</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td>
+            </tr>
+            <tr>
+              <th>Sharks</th>
+              <td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="avail">&#10003;</td><td class="peak">&#9733;</td>
+              <td class="peak">&#9733;</td><td class="peak">&#9733;</td><td class="avail">&#10003;</td><td class="none">&mdash;</td><td class="none">&mdash;</td><td class="none">&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="chart-legend">
+          <span><span class="dot" style="background:var(--gold);"></span> Peak Season</span>
+          <span><span class="dot" style="background:#22c55e;"></span> In Season</span>
+          <span><span class="dot" style="background:var(--gray-700);"></span> Not Available</span>
+        </div>
       </div>
     </div>
   </section>
@@ -2348,6 +2510,10 @@
     const allPhotos = [
       'images/captain-hogg.jpg','images/captain-hogg-2.jpg','images/boat-on-water.jpg',
       'images/smokin-gun-ii.jpg','images/boat-action.jpg',
+      'images/fish_cobia-feat.png','images/fish_cobia-feat-1.png','images/fish_striped-bass.png',
+      'images/fish_species-3.png','images/fish_species-4.png','images/fish_species-5.png',
+      'images/fish_species-6.png','images/fish_species-7.png','images/fish_species-8.png',
+      'images/fish_species-9.png','images/fish_species-10.png',
       'images/photo_001.jpg','images/photo_002.jpg','images/photo_003.png','images/photo_004.jpg',
       'images/photo_005.png','images/photo_006.png','images/photo_007.jpg','images/photo_008.png',
       'images/photo_010.jpg','images/photo_011.jpg','images/photo_012.jpg','images/photo_013.jpg',
