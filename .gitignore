@@ -1,0 +1,10 @@
+node_modules/
+package-lock.json
+package.json
+*.mjs
+site-images.json
+blog-images.json
+site-screenshot.png
+homepage-scroll-*.png
+subpage-*.png
+blog-*.png
