@@ -1230,6 +1230,64 @@
         <p style="color:var(--gray-400);font-size:0.9rem;margin-bottom:0.75rem;">Don't want to set up OAuth? No problem. When you confirm a booking, an <strong style="color:var(--white);">"Add to Google Calendar"</strong> button will appear. Click it to add the event directly &mdash; no API connection needed.</p>
         <p style="color:var(--green);font-size:0.85rem;">&#10003; This works by default with no setup.</p>
       </div>
+
+      <div class="gcal-settings">
+        <h3>&#128179; STRIPE DEPOSIT PAYMENTS</h3>
+        <p style="color:var(--gray-400);font-size:0.9rem;margin-bottom:1.25rem;">Connect your Stripe account to send deposit payment requests to customers.</p>
+        <div id="stripe-status" style="margin-bottom:1rem;"><span style="color:var(--gray-500);font-size:0.85rem;">Not connected</span></div>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block;font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;">Stripe Secret Key</label>
+          <div style="display:flex;gap:0.75rem;align-items:center;">
+            <input type="password" id="stripe-secret-key" placeholder="sk_live_..." style="flex:1;padding:0.7rem 1rem;background:var(--navy);border:1px solid var(--navy-lighter);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:0.85rem;outline:none;">
+            <button class="action-btn action-btn-confirm" onclick="saveStripeKey()">Save</button>
+          </div>
+          <p style="color:var(--gray-500);font-size:0.75rem;margin-top:0.5rem;">Get your key from <a href="https://dashboard.stripe.com/apikeys" target="_blank" style="color:var(--teal);">Stripe Dashboard</a> &rarr; Developers &rarr; API Keys.</p>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block;font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;">Deposit Percentage</label>
+          <div style="display:flex;gap:0.75rem;align-items:center;">
+            <input type="number" id="deposit-pct" value="18" min="1" max="100" style="width:80px;padding:0.7rem 1rem;background:var(--navy);border:1px solid var(--navy-lighter);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:0.85rem;outline:none;text-align:center;">
+            <span style="color:var(--gray-400);font-size:0.9rem;">% of trip total</span>
+            <button class="action-btn action-btn-confirm" onclick="saveDepositPct()">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gcal-settings">
+        <h3>&#128176; PAYPAL DEPOSITS</h3>
+        <p style="color:var(--gray-400);font-size:0.9rem;margin-bottom:1.25rem;">Enter your PayPal.me username to generate deposit payment links.</p>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block;font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;">PayPal.me Username</label>
+          <div style="display:flex;gap:0.75rem;align-items:center;">
+            <div style="display:flex;align-items:center;flex:1;background:var(--navy);border:1px solid var(--navy-lighter);border-radius:8px;overflow:hidden;">
+              <span style="padding:0.7rem 0.75rem;color:var(--gray-500);font-size:0.85rem;white-space:nowrap;">paypal.me/</span>
+              <input type="text" id="paypal-username" placeholder="yourusername" style="flex:1;padding:0.7rem 0.5rem;background:transparent;border:none;color:var(--white);font-family:var(--font-body);font-size:0.85rem;outline:none;">
+            </div>
+            <button class="action-btn action-btn-confirm" onclick="savePayPalUsername()">Save</button>
+          </div>
+          <div id="paypal-status" style="margin-top:0.5rem;font-size:0.8rem;"></div>
+        </div>
+      </div>
+
+      <div class="gcal-settings">
+        <h3>&#128231; DEPOSIT EMAIL SETTINGS</h3>
+        <p style="color:var(--gray-400);font-size:0.9rem;margin-bottom:1.25rem;">Customize the email sent to customers when you request a deposit.</p>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block;font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;">Business Name</label>
+          <div style="display:flex;gap:0.75rem;align-items:center;">
+            <input type="text" id="deposit-business-name" placeholder="Captain Hogg's Charter Service" value="Captain Hogg's Charter Service" style="flex:1;padding:0.7rem 1rem;background:var(--navy);border:1px solid var(--navy-lighter);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:0.85rem;outline:none;">
+            <button class="action-btn action-btn-confirm" onclick="saveDepositBusinessName()">Save</button>
+          </div>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block;font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;">Captain Phone</label>
+          <div style="display:flex;gap:0.75rem;align-items:center;">
+            <input type="tel" id="deposit-phone" placeholder="(757) 876-1590" value="(757) 876-1590" style="flex:1;padding:0.7rem 1rem;background:var(--navy);border:1px solid var(--navy-lighter);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:0.85rem;outline:none;">
+            <button class="action-btn action-btn-confirm" onclick="saveDepositPhone()">Save</button>
+          </div>
+        </div>
+      </div>
+
     </div><!-- end panel-settings -->
 
   </div>
@@ -1529,6 +1587,7 @@
               ${status !== 'cancelled' ? `
               <button class="action-btn action-btn-edit" onclick="event.stopPropagation();document.getElementById('editdate-${globalIdx}').style.display='flex';">&#9998; Edit Date</button>
               <button class="action-btn action-btn-calendar" onclick="event.stopPropagation();addToCalendar(${globalIdx})">&#128197; Add to Calendar</button>
+              <button class="action-btn" onclick="event.stopPropagation();sendDeposit('${b.id}',${globalIdx})" style="background:rgba(245,158,11,0.15);color:var(--gold);border:1px solid rgba(245,158,11,0.3);">&#128179; Send Deposit</button>
               <button class="action-btn" onclick="event.stopPropagation();cancelBooking('${b.id}');" data-name="${escapeHtml(b.name)}" style="background:transparent;color:var(--red);border:1px solid rgba(239,68,68,0.3);">&#10007; Cancel</button>
               ` : ''}
             </div>
@@ -1636,7 +1695,7 @@
     });
     if (tab === 'blog') initBlogTab();
     if (tab === 'traffic') fetchTraffic();
-    if (tab === 'settings') loadGCalSettings();
+    if (tab === 'settings') { loadGCalSettings(); loadPaymentSettings(); }
     if (tab === 'calendar') renderCalendar();
   }
 
@@ -2412,6 +2471,87 @@
       if (e.target === this) closeModal(id);
     });
   });
+
+  // ========== STRIPE / PAYPAL DEPOSIT FUNCTIONS ==========
+  function saveStripeKey() {
+    var key = document.getElementById('stripe-secret-key').value.trim();
+    if (!key) { alert('Please enter a Stripe Secret Key.'); return; }
+    localStorage.setItem('ws_stripe_key', key);
+    document.getElementById('stripe-status').innerHTML = '<span style="color:var(--green);font-size:0.85rem;">&#10003; Stripe connected</span>';
+    alert('Stripe key saved!');
+  }
+  function saveDepositPct() {
+    var pct = parseInt(document.getElementById('deposit-pct').value) || 18;
+    localStorage.setItem('ws_deposit_pct', pct);
+    alert('Deposit percentage saved: ' + pct + '%');
+  }
+  function savePayPalUsername() {
+    var username = document.getElementById('paypal-username').value.trim();
+    if (!username) { alert('Enter a PayPal.me username.'); return; }
+    localStorage.setItem('ws_paypal_username', username);
+    document.getElementById('paypal-status').innerHTML = '<span style="color:var(--green);font-size:0.85rem;">&#10003; PayPal connected</span>';
+    alert('PayPal saved!');
+  }
+  function saveDepositBusinessName() {
+    localStorage.setItem('ws_deposit_business', document.getElementById('deposit-business-name').value.trim() || "Captain Hogg's Charter Service");
+    alert('Business name saved!');
+  }
+  function saveDepositPhone() {
+    localStorage.setItem('ws_deposit_phone', document.getElementById('deposit-phone').value.trim() || '(757) 876-1590');
+    alert('Phone saved!');
+  }
+  function loadPaymentSettings() {
+    var sk = localStorage.getItem('ws_stripe_key');
+    var pp = localStorage.getItem('ws_paypal_username');
+    var dp = localStorage.getItem('ws_deposit_pct');
+    var bn = localStorage.getItem('ws_deposit_business');
+    var ph = localStorage.getItem('ws_deposit_phone');
+    if (sk) { document.getElementById('stripe-secret-key').value = sk.substring(0,8) + '...' + sk.slice(-4); document.getElementById('stripe-status').innerHTML = '<span style="color:var(--green);font-size:0.85rem;">&#10003; Stripe connected</span>'; }
+    if (pp) { document.getElementById('paypal-username').value = pp; document.getElementById('paypal-status').innerHTML = '<span style="color:var(--green);font-size:0.85rem;">&#10003; PayPal connected</span>'; }
+    if (dp) document.getElementById('deposit-pct').value = dp;
+    if (bn) document.getElementById('deposit-business-name').value = bn;
+    if (ph) document.getElementById('deposit-phone').value = ph;
+  }
+  function sendDeposit(bookingId, idx) {
+    var booking = allBookings.find(function(b) { return b.id === bookingId; });
+    if (!booking) { alert('Booking not found.'); return; }
+    var sk = localStorage.getItem('ws_stripe_key');
+    var pp = localStorage.getItem('ws_paypal_username');
+    var pct = parseInt(localStorage.getItem('ws_deposit_pct')) || 18;
+    var biz = localStorage.getItem('ws_deposit_business') || "Captain Hogg's Charter Service";
+    var phone = localStorage.getItem('ws_deposit_phone') || '(757) 876-1590';
+    if (!sk && !pp) { alert('Configure Stripe or PayPal in Settings first.'); switchTab('settings'); return; }
+    var prices = { 'half-day': 500, 'full-day': 900, 'marathon': 1100 };
+    var rawTotal = String(booking.estimated_total).replace(/[^0-9.]/g, '');
+    var total = parseInt(rawTotal) || prices[booking.trip_type] || 900;
+    var deposit = Math.round(total * pct / 100);
+    var email = booking.email !== '--' ? booking.email : '';
+    var name = booking.name !== '--' ? booking.name : '';
+    var date = booking.preferred_date !== '--' ? booking.preferred_date : 'TBD';
+    if (pp && !sk) {
+      var url = 'https://paypal.me/' + pp + '/' + deposit + 'USD';
+      navigator.clipboard.writeText(url).catch(function(){});
+      alert('PayPal deposit link for $' + deposit + ':\n' + url + '\n\nLink copied to clipboard! Send to ' + (email || name));
+      return;
+    }
+    if (sk) {
+      fetch('/.netlify/functions/create-checkout', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stripeKey: sk, amount: deposit * 100, customerEmail: email, customerName: name, tripDate: date, tripType: booking.trip_type || 'charter', businessName: biz, bookingId: bookingId })
+      }).then(function(r) { return r.json(); }).then(function(data) {
+        if (data.url) {
+          fetch('/.netlify/functions/send-deposit-email', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, name: name, amount: deposit, paymentUrl: data.url, tripDate: date, bizName: biz, phone: phone })
+          }).catch(function(){});
+          navigator.clipboard.writeText(data.url).catch(function(){});
+          alert('Deposit request sent!\nAmount: $' + deposit + '\nEmail: ' + email + '\nLink: ' + data.url);
+        } else {
+          alert('Stripe error: ' + (data.error || 'Unknown error'));
+        }
+      }).catch(function(err) { alert('Stripe error: ' + err.message); });
+    }
+  }
 
   function formatBytes(bytes) {
     if (bytes === 0) return '0 B';
